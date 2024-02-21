@@ -1,0 +1,306 @@
+	body,
+	h1,
+	p,
+	input[type="text"],
+	.banner,
+	.search-bar,
+	.suggestions,
+	.additional-para {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font: 400 16px/1.5 roboto, sans-serif;
+		background-color: #fff;
+		color: #333;
+	}
+
+	.banner {
+		position: relative;
+		background: url('https://image3.jdomni.in/library/21022024/65/48/C0/0A21CF0025B3AFC58009F0B868_1708457296848.png') center/cover no-repeat;
+		color: #000;
+		text-align: left;
+		padding: 5% 10%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		height: 65vh;
+		transition: background .5s ease-in-out;
+	}
+
+	h1 {
+		font-size: 3em;
+		color: #555555;
+		max-width: 500px;
+		text-align: left;
+	}
+
+	p {
+		font-size: 1.1em;
+		max-width: 500px;
+		line-height: 1.5;
+		text-align: left;
+		color: #1900FF;
+		font-weight: bold;
+	}
+
+	li {
+		margin-left: 20px;
+		color: #555555;
+	}
+
+	.search-bar {
+		width: 100%;
+		height: 20%;
+		max-width: 500px;
+		margin-top: 20px;
+		position: relative;
+		background-color: #fff;
+		border-radius: 8px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+		transition: box-shadow .3s ease-in-out;
+		display: flex;
+		align-items: center;
+	}
+
+	#searchIcon {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		/* Adjust the distance from the right side */
+		transform: translateY(-50%);
+		color: #555;
+		/* Adjust the icon color */
+		pointer-events: none;
+		/* Ensure the icon doesn't interfere with input events */
+	}
+
+	input[type="text"] {
+		flex: 1;
+		padding: 15px;
+		font-size: 1em;
+		border: none;
+		border-radius: 8px;
+		box-shadow: none;
+		outline: none;
+	}
+
+	.suggestions {
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 0;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+		display: none;
+		border-radius: 8px;
+		overflow: hidden;
+		transition: max-height .3s ease-out;
+		z-index: 1;
+	}
+
+	.suggestions a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+		color: #333;
+		transition: background .3s ease;
+	}
+
+	.suggestions a:hover {
+		background: #f0f0f0;
+	}
+
+	.additional-para {
+		font-size: 1.2em;
+		max-width: 600px;
+		line-height: 1.1;
+		margin-top: 20px;
+		color: #007BFF;
+		text-align: left;
+	}
+
+	.additional-para span {
+		color: #555555;
+		font-weight: bold;
+	}
+
+	@media (max-width: 768px) {
+		.banner {
+			background: #ECEDFF;
+			padding: 10% 5%;
+			height: 40vh;
+			/* Adjusted to 40vh for smaller size */
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1em;
+			color: #1900FF;
+			margin-left: 0px;
+			font-weight: bold;
+		}
+
+		.additional-para {
+			font-size: 0.8em;
+			text-align: left;
+		}
+
+		li {
+			margin-left: 40px;
+			color: #555555;
+		}
+
+		.suggestions {
+			display: block;
+			top: 100%;
+			max-height: 200px;
+		}
+
+		.search-bar:focus-within {
+			box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+			width: 100%;
+		}
+
+		/* CSS rule to make the image smaller on mobile */
+		.section-container img {
+			max-width: 100%;
+			height: auto;
+			max-height: 200px;
+			/* Adjust the max-height as needed */
+		}
+
+		body {
+			color: #000;
+			/* Change text color to black on mobile */
+		}
+
+		.checkmark {
+			color: #007BFF;
+			/* Change checkmark color to blue */
+		}
+
+		h3 {
+			margin-left: 0px;
+			/* Add left margin for h4 and h5 on mobile */
+			font-size: 30px;
+		}
+
+		h4 {
+			margin-left: 10px;
+			/* Add left margin for h4 and h5 on mobile */
+			font-size: 20px;
+		}
+	}
+
+	.section-heading {
+		text-align: center;
+		margin-bottom: 30px;
+		font-size: 24px;
+		font-weight: 700;
+		color: #333;
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.service-icon-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.service-icon {
+		width: 28%;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.service-icon img {
+		width: 80%;
+		max-width: 80px;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.service-name {
+		margin-top: 10px;
+		font-weight: bold;
+		color: #555555;
+	}
+
+	.service-icon a {
+		text-decoration: none;
+	}
+
+	section.container {
+		display: flex;
+		align-items: lcenter;
+		justify-content: space-between;
+		padding: 50px;
+	}
+
+	.image {
+		width: 50%;
+		max-width: 100%;
+	}
+
+	.image img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.text {
+		width: 45%;
+	}
+
+	h3 {
+		font-size: 24px;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	h4 {
+		font-size: 18px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 20px;
+	}
+
+	.icon {
+		margin-right: 8px;
+		color: blue;
+		/* Change icon color to blue */
+	}
+
+	.text li {
+		list-style-type: none;
+		margin-left: 45px;
+		/* Remove the bullets from list items */
+	}
+
+	/* Media queries */
+	@media (max-width: 767px) {
+		section.container {
+			flex-direction: column;
+			padding: 20px;
+		}
+
+		.image,
+		.text {
+			width: 100%;
+		}
+	}
